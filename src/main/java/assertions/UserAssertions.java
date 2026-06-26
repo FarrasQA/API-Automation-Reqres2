@@ -20,10 +20,7 @@ public class UserAssertions {
         String actualEmail =
                 response.jsonPath().getString("data.email");
 
-        // =========================
-        // REAL TEST ASSERTIONS
-        // =========================
-
+        //ASSERTIONS
         Assert.assertEquals(
                 actualId,
                 expectedId,
@@ -35,10 +32,7 @@ public class UserAssertions {
                 "Email does not contain expected domain."
         );
 
-        // =========================
         // EXTENT REPORT ASSERTIONS
-        // =========================
-
         ApiReportManager.addAssertion(
                 "data.id",
                 String.valueOf(actualId)
@@ -78,10 +72,7 @@ public class UserAssertions {
 
         int actualDataSize = users.size();
 
-        // =========================
-        // REAL TEST ASSERTIONS
-        // =========================
-
+        // ASSERTIONS
         Assert.assertEquals(
                 actualPage,
                 expectedPage,
@@ -126,10 +117,7 @@ public class UserAssertions {
                 "No user has both last_name and avatar."
         );
 
-        // =========================
         // EXTENT REPORT ASSERTIONS
-        // =========================
-
         ApiReportManager.addAssertion(
                 "page",
                 String.valueOf(actualPage)

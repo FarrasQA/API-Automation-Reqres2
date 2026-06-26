@@ -33,10 +33,10 @@ public class TestListener implements ITestListener {
     @Override
     public void onStart(ITestContext context) {
 
-        System.out.println("========== TEST LISTENER STARTED ==========");
+        System.out.println("TEST LISTENER STARTED");
 
         log.info(
-                "========== Test Suite Started : {} ==========",
+                "Test Suite Started : {}",
                 context.getName()
         );
 
@@ -190,7 +190,6 @@ public class TestListener implements ITestListener {
     }
 
     // API INFORMATION
-
     private void attachApiInformation() {
 
         ApiInfo apiInfo = ApiReportManager.getApiInfo();
@@ -206,10 +205,7 @@ public class TestListener implements ITestListener {
             return;
         }
 
-        // =====================================================
         // REQUEST
-        // =====================================================
-
         addInfo(
                 "Method",
                 apiInfo.getMethod()
@@ -225,10 +221,7 @@ public class TestListener implements ITestListener {
                 apiInfo.getRequestBody()
         );
 
-        // =====================================================
         // RESPONSE
-        // =====================================================
-
         addInfo(
                 "Status Code",
                 apiInfo.getStatusCode()
@@ -261,10 +254,7 @@ public class TestListener implements ITestListener {
                 apiInfo.getResponseBody()
         );
 
-        // =====================================================
         // ASSERTIONS
-        // =====================================================
-
         if (apiInfo.getAssertions() == null
                 || apiInfo.getAssertions().isEmpty()) {
 
@@ -290,7 +280,6 @@ public class TestListener implements ITestListener {
     }
 
     // EXECUTION TIME
-
     private void attachExecutionTime(
             ITestResult result
     ) {
@@ -308,7 +297,6 @@ public class TestListener implements ITestListener {
     }
 
     // REPORT HELPERS
-
     private void addInfo(
             String title,
             Object value

@@ -20,7 +20,6 @@ public class ApiInfo {
             new LinkedHashMap<>();
 
     // Request
-
     public String getMethod() {
         return method;
     }
@@ -46,7 +45,6 @@ public class ApiInfo {
     }
 
     // Response
-
     public int getStatusCode() {
         return statusCode;
     }
@@ -82,7 +80,6 @@ public class ApiInfo {
     }
 
     // Assertions
-
     public Map<String, Object> getAssertions() {
         return assertions;
     }

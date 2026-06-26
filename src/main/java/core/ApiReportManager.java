@@ -7,9 +7,7 @@ public class ApiReportManager {
     private static final ThreadLocal<ApiInfo> apiInfo =
             ThreadLocal.withInitial(ApiInfo::new);
 
-    /**
-     * Attach Request & Response Information
-     */
+    //Attach Request & Response Information
     public static void attach(
             String method,
             String endpoint,
@@ -46,9 +44,7 @@ public class ApiReportManager {
         }
     }
 
-    /**
-     * Attach Assertion Result
-     */
+    //Attach Assertion Result
     public static void addAssertion(
             String key,
             Object value
@@ -59,17 +55,13 @@ public class ApiReportManager {
                 .put(key, value);
     }
 
-    /**
-     * Get API Information
-     */
+    //Get API Information
     public static ApiInfo getApiInfo() {
 
         return apiInfo.get();
     }
 
-    /**
-     * Clear ThreadLocal after each test
-     */
+    //Clear ThreadLocal after each test
     public static void clear() {
 
         apiInfo.remove();
