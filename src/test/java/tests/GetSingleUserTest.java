@@ -18,7 +18,7 @@ import static org.testng.Assert.assertEquals;
 public class GetSingleUserTest extends BaseApi {
 
     @Test(groups = "smoke")
-    public void ts1_api_successGetSingleUser() {
+    public void ts1_successGetSingleUser() {
 
         int userId = Integer.parseInt(
                 ConfigReader.getProperty("single.user.id")
@@ -70,7 +70,7 @@ public class GetSingleUserTest extends BaseApi {
     }
 
     @Test(groups = "smoke")
-    public void ts2_api_userNotFound() {
+    public void ts2_failGetUserNotFound() {
 
         int userId = Integer.parseInt(
                 ConfigReader.getProperty("single.user.not.found.id")

@@ -16,7 +16,7 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInC
 public class GetPaginationUserTest extends BaseApi {
 
     @Test(groups = "smoke")
-    public void ts3_api_successGetPaginationUsers() {
+    public void ts3_successGetPaginationUser() {
 
         int page =
                 Integer.parseInt(
