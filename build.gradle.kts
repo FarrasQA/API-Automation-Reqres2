@@ -2,8 +2,8 @@ plugins {
     id("java")
 }
 
-group = "org.example"
-version = "1.0-SNAPSHOT"
+group = "farras.api.automation"
+version = "1.0-Reqres"
 
 repositories {
     mavenCentral()
